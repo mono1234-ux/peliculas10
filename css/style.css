@@ -127,6 +127,74 @@ body {
 .titulo-pelicula {
     margin-top: 0.5rem;
 }
+
+
+
+.carrucel{
+    max-height: none;
+    overflow-x: auto;
+    overflow-y: visible;
+    display: flex;
+    margin: 48px 25px 48px 25px;
+}
+
+.carrucel::-webkit-scrollbar{
+    width: 0;
+}
+
+.carrucel .series{
+    min-width: 255px;
+    height: 400px;
+    line-height: 440px;
+    text-align: center;
+    margin-right: 15px;
+    position: relative;
+    display: inline-block;
+    overflow: visible; 
+}
+
+.series img{
+    width: 100%;
+    height: 100%;
+    transition: transform 0.3s;
+    display: block;
+    position: relative; /* Quita absolute */
+    left: 0;
+    top: 0;
+    z-index: 2;
+}
+
+.series .btn{
+    position: absolute;
+    top: 110%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+}
+
+.cartelera h2{
+    color: #111111;
+    font-size: 24px;
+    margin: 100px 48px 20px 48px;
+
+}
+
+.carrucel .series:hover img{
+    transform: scale(1.1);
+    z-index: 3; 
+}
+
+.carrucel .series{
+    color: #c7c3c3;
+    position: relative;
+    transition: 0.5s;
+    overflow: visible;
+}
+
+.carrucel:hover .series:not(:hover) {
+    filter: blur(5px);
+}
+
+
 .footer {
     background-color: var(--color-secundario);
     color: white;
@@ -134,4 +202,5 @@ body {
     padding: 1rem;
     margin-top: 2rem;
     height: 10rem;
+
 }
